@@ -179,13 +179,15 @@ img {
     background-image: url(../img/icon-facebook.png);
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #bbb;
+    /* background-color: #bbb; */
+    border-radius: 10px;
+    
 
 }
 
 .team-list-social a:hover,
 .team-list-social a:focus {
-    background-color:red;
+    background-color:rgb(9, 185, 255);
 }
 
 /* .icon-facebook {
