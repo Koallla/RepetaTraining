@@ -345,8 +345,11 @@ img {
 /*COUNT*/
 
 .list {
+    width: 1300px;
     counter-reset: article-count;
     list-style: none;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .list-item:before {
@@ -360,5 +363,5 @@ img {
     font-size: 20px;
     color: #2747b1;
     text-align: center;
-    line-height: 40;
+    /* line-height: 40; */
 }
