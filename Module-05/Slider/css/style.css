@@ -1,0 +1,79 @@
+.slider {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    box-shadow: 2px 2px 5px rgba(154, 147, 140, 0.5), inset 2px 2px 5px rgba(154, 147, 140, 0.5);
+    margin: auto;
+
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.slides {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.slide-image {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.slides-item {
+    position: relative;
+}
+
+.slide-descr {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    width: 300px;
+    background: white;
+}
+
+.slider-pagination-item {
+    display: inline-block;
+    width: 60px;
+    height: 5px;
+    background-color: #b0b8b9;
+
+}
+
+.slider-pagination-active {
+    background-color:teal;
+}
+
+.slider-ctrl {
+    position: absolute;
+    display: inline-block;
+    width: 50px;
+    height: 57px;
+    background-color: teal;
+    border: none; /*Убираем бордер у кнопок*/
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.slider-ctrl-prev {
+    left: 2%;
+}
+
+.slider-ctrl-next {
+    right: 2%;
+}
+
+.slider-pagination {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}

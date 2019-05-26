@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*Выравниваем блок по центру родителя*/
+/* .box {
+    display: flex;
+    height: 500px;
+    width: 500px;
+    background: #000;
+} */
+
+.inner {
+    margin-top: auto;/*выровнял блок по центру*/
+    margin-bottom: auto;/*выровнял блок по центру*/
+    /*Если все margin: auto - то блок центрируется по центру родителя*/
+    width: 200px;
+    height: 200px;
+    background: teal;
+}
+
+/* .wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #f1fffa;
+} */
+
+
+
+
+/*Position absolute-блок по центру родителя*/
+
+/* .box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    background: #000;
+}
+
+.inner {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background: palevioletred;
+} */
+
+
+
+
+
+/*Три колонки выравниваем по самой большой*/
+/* .column {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+.left-column {
+    background: lightblue;
+    width: 200px;
+
+}
+
+.centr-column {
+    background: teal;
+    width: 500px;
+}
+
+.right-column {
+    background: purple;
+    width: 300px;
+}
+
+.wrapper {
+    display: flex;
+    width: 1000px;
+} */
+
+
+
+
+/* Хедер и футер прижать к верху и низу*/
+/* body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 100px;
+    background: teal;
+}
+
+main {
+    background: lightblue;
+    flex-grow: 1;
+}
+
+footer {
+    height: 150px;
+    background: lightcoral;
+} */
+
+
+
+/* Резиновая верстка */
+/* .wrapper {
+    display: flex;
+    min-height: 100vh;
+
+}
+
+.sidebar {
+    background: teal;
+    flex-basis: 250px;
+    
+
+}
+
+
+.content {
+    background: orange;
+    flex-grow: 1;
+} */
+
+
+
+
+/* Растянуть Лого и навигация по краям */
+
+
+.mastheader {
+    min-height: 100px;
+    padding: 0 20px;
+    justify-content: space-between;
+    display: flex;
+    background: teal;
+    align-items: center;
+}
+
+
+.mastheader ul {
+    display: flex;
+    flex-wrap: wrap;/*чтобы переносилось на новую строку если не влазит текст*/
+    width: 400px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.logo {
+    background: coral;
+}
+
+.mastheader li {
+    padding: 10px 20px;
+    background: coral
+
+}
+
+/*Выставляем картинки равномерно в ряды*/
+
+.about {
+    width: 955px;
+    margin: 0 auto;
+}
+
+.about-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.about-item {
+    flex-basis: 285px;
+    
+    padding: 10px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.about-item:not(:nth-child(3n)) {
+    margin-right: 20px;
+}
+
+.about-item:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 20px;
+}

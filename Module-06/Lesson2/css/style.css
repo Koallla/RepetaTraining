@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.box {
+    top: 200px;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsla(290, 100%, 20%, 0.5);
+    box-shadow: 1px 2px 2px 2px;
+}
+
+
+/* STEP1 Задаем, что будет изменяться */
+.animated-width {
+    /* transition-property: width;
+    transition-duration: 3s; */
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-delay: 0.5s; 
+    /* transition-property: opacity; */
+}
+
+/* STEP2 Задаем, по какому событию и на сколько будет изменяться */
+.animated-width:hover {
+    /* width: 300px; */
+    /* opacity: 0.5; */
+    transform: scale(2);
+    transition-delay: 1.5s; 
+}
+
+
+.animated-background {
+    transition-property: background-color;
+    transition-duration: 3s;
+}
+
+.animated-background:hover {
+    background: teal;
+    transition-timing-function: linear;
+}
