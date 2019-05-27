@@ -38,17 +38,28 @@ img {
     /* margin-bottom: 120px; */
     background-color: #4b19ec;
     /* margin-bottom: 200px; */
-    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.25)
-
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.25);
+    
 }
+
+
 
 .page-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 100px;    
+    /* animation: header-appear 0.5s linear; */
 }
 
+/* @keyframes header-appear {
+    0% {
+        transform: translateY(-300px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+} */
 
 
 
@@ -56,7 +67,22 @@ img {
     display: inline-block;
     /*vertical-align: middle; для центровки со словами навигации*/
     height: 57px;
+    animation: logo-appear 1s linear;
 }
+
+@keyframes logo-appear {
+    0% {
+        transform: translateY(-200px);
+    }
+    50% {
+        transform: translateY(0);
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 
 /* cite navigation */
@@ -215,10 +241,12 @@ img {
     /*красивая тень*/
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     padding: 10px;
+    transition: transform 0.2s ease-in, box-shadow 0.5s linear;/*время срабатывания анимации*/
 }
 
 .team-list-item:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transform: scale(1.1);
 }
 
 .team-list-item:last-child {
@@ -229,6 +257,7 @@ img {
     width: 270px;
     height: 180px;
     filter: grayscale(1);
+    transition: filter 0.3s ease-out;
     /* -webkit-filter: blur(5px); Отображает в Хроме и Сафари*/ 
 }
 
@@ -249,6 +278,7 @@ img {
     font-size: 14px;
     margin: 0;
     padding: 0;
+
 }
 
 .team-list-social li {
@@ -264,11 +294,13 @@ img {
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 10px;
+    transition: background-color 0.2s linear;
 }
 
 .team-list-social a:hover,
 .team-list-social a:focus {
     background-color:rgb(9, 185, 255);
+    transform: scale(1.1);
 }
 
 .icon-fb {
