@@ -1,0 +1,367 @@
+html {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, 
+*::before, 
+*::after {
+    box-sizing: inherit;
+}
+
+
+.container {
+    width: 320px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+img {
+    display: inline-block;
+    max-width: 100%; /* Не растягивается больше своего размера*/
+    height: auto;
+    /* width: 50px; */
+    /* margin-left: -7px; */ 
+}
+
+.page-header {
+    /* margin-bottom: 120px; */
+    background-color: #4b19ec;
+    /* margin-bottom: 200px; */
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.25);
+    
+}
+
+
+
+.page-nav {
+    min-height: 100px;    
+    /* animation: header-appear 0.5s linear; */
+}
+
+@keyframes header-appear {
+    0% {
+        transform: translateY(-300px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+.site-logo {
+    display: block;
+    /*vertical-align: middle; для центровки со словами навигации*/
+    height: 57px;
+    animation: logo-appear 1s linear;
+}
+
+@keyframes logo-appear {
+    0% {
+        transform: translateY(-200px);
+    }
+    50% {
+        transform: translateY(0);
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/* cite navigation */
+.site-navigation {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    list-style: none;
+  
+    
+}
+
+.site-navigation a {
+    display: block;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 16px;
+    transition: color 0.2s linear;
+
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus { /*для выделения элементов при табуляции*/
+    color: red;
+}
+
+/* FEATURE SECTION */
+.features {
+    margin-bottom: 120px;
+}
+
+/*feature list*/
+.features-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.features-list-item h3 {
+    color: #085c24;
+    line-height: 17px;
+    font-size: 14px;
+    margin-bottom: 24px; /*померяли расстояние между строками и минус половина высоты строки обеих строк*/
+}
+.features-list-item p {
+    font-size: 14px;
+}
+
+.features-list-item {
+    width: 290px;
+    /*flex: 0 0 370;То же самое, что три верхних пункта*/
+    text-align: center;
+    
+   
+   
+}
+
+.features-list-item::before {
+    content: '';
+    display: block;
+    /* background: teal; */
+    height: 64px;
+    margin-bottom: 34px;
+}
+.calendar::before {
+    background-image: url(../img/icon/features/calendar.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cloud::before {
+    background-image: url(../img/icon/features/paper-plane.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.internet::before {
+    background-image: url(../img/icon/features/internet.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.camera::before {
+    background-image: url(../img/icon/features/photo-camera.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.placeholder::before {
+    background-image: url(../img/icon/features/placeholder.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.settings::before {
+    background-image: url(../img/icon/features/settings.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* TEAM SECTION */
+
+.team {
+    margin-bottom: 120px;
+}
+
+.team-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}   
+.team-list-item {
+    width: 270px;
+    /*красивая тень*/
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    padding: 10px;
+    transition: transform 0.2s ease-in, box-shadow 0.5s linear;/*время срабатывания анимации*/
+}
+
+.team-list-item:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transform: scale(1.1);
+}
+
+/* .team-list-item:last-child {
+    margin-right: 0;
+} убираем у последнего правый марджин */
+
+.team-list-image {
+    width: 270px;
+    height: 180px;
+    filter: grayscale(1);
+    transition: filter 0.3s ease-out;
+    /* -webkit-filter: blur(5px); Отображает в Хроме и Сафари*/ 
+}
+
+/*фильтр для фото, но активируется при наведении на любую часть блока*/
+.team-list-item:hover .team-list-image {
+    filter: grayscale(0.5);
+}
+ 
+
+
+.team-list-about {
+    font-size: 14px;
+}
+
+.team-list-social {
+    display: flex;
+    list-style: none;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+
+}
+
+.team-list-social li {
+    margin-right: 4px;
+}
+
+
+.team-list-social a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgb(232, 236, 238); /*сделали квадратик*/
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    transition: background-color 0.2s linear;
+}
+
+.team-list-social a:hover,
+.team-list-social a:focus {
+    background-color:rgb(9, 185, 255);
+    transform: scale(1.1);
+}
+
+.icon-fb {
+    background-image: url(../img/icon/social/icon-facebook.png);
+}
+
+.icon-tw {
+    background-image: url(../img/icon/social/icon-twitter.png);
+}
+    
+.icon-ld {
+    background-image: url(../img/icon/social/icon-linkedin.png);
+}
+    
+.team-list-name {
+    line-height: 26px;
+    font-size: 22px;
+    color: #b81875;
+}
+
+.team-list-occupation {
+    font-size: 13px;
+    line-height: 16px;
+    color: #e84545;
+    text-transform: uppercase;
+    margin-bottom: ;
+}
+
+/* FOOTER */
+
+.page-footer {
+    color: #fff;
+    background-color: #2747b1;
+    
+}
+
+.page-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 246px;
+}
+
+.footer-social-list {
+    text-decoration: none;
+    list-style: none;
+}
+
+.footer-social-list a {
+    color: teal;
+    text-decoration: none;
+}
+
+
+
+.download {
+    text-align: center;
+}
+
+.download-button {
+    border: none;
+    margin: 0;
+    padding: 14px 82px;
+    min-width: 280px;
+    background-color: rgb(112, 36, 36);
+    font-size: 13px;
+    line-height: 21px;
+    color: aliceblue;
+    cursor: pointer;
+}
+    
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
+/*COUNT*/
+
+.list {
+    width: 1300px;
+    counter-reset: article-count;
+    list-style: none;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.list-item:before {
+    counter-increment: article-count;
+    content: counter(article-count);
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    /* float: left; */
+    font-size: 20px;
+    color: #2747b1;
+    text-align: center;
+    /* line-height: 40; */
+}
